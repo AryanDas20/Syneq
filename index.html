@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b10">
+  <meta name="description" content="SYNEQ builds thoughtful digital systems for campus life, student wellbeing, and a more connected future. Explore UniTrade and OrbitX.">
+  <title>SYNEQ — Systems for the Next Generation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Animated opening / reload experience -->
+  <div class="boot-screen" id="bootScreen" role="status" aria-live="polite">
+    <div class="boot-grid" aria-hidden="true"></div>
+    <div class="boot-core">
+      <div class="brand-mark brand-mark-large"><span>S</span><i></i></div>
+      <div class="boot-wordmark">SYNEQ<span>®</span></div>
+      <p id="bootMessage">Warming up the idea engine</p>
+      <div class="boot-progress"><span id="bootBar"></span></div>
+      <div class="boot-meta"><span>SYNEQ / SYSTEMS STUDIO</span><span id="bootPercent">00%</span></div>
+      <button class="text-button boot-skip" id="skipBoot" type="button">Skip intro <span aria-hidden="true">↗</span></button>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner wrap">
+      <a class="brand" href="#home" aria-label="SYNEQ home">
+        <span class="brand-mark"><span>S</span><i></i></span>
+        <span class="brand-word">SYNEQ<span class="brand-dot">.</span><small>INDEPENDENT SYSTEMS STUDIO</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#ecosystem">Capabilities</a>
+        <a href="#impact">Impact</a>
+        <a href="#about">About</a>
+        <a href="#team">People</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Toggle theme"><span class="theme-glyph" aria-hidden="true">☼</span></button>
+        <button class="icon-button search-open" id="searchOpen" type="button" aria-label="Search website" title="Search (/)" ><span aria-hidden="true">⌕</span></button>
+        <button class="profile-button" id="accountButton" type="button"><span class="profile-avatar" id="headerAvatar">?</span><span id="accountButtonText">Your space</span></button>
+        <button class="menu-toggle icon-button" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="hero section-shell" id="home" data-tour="hero">
+      <div class="hero-orb orb-one" aria-hidden="true"></div><div class="hero-orb orb-two" aria-hidden="true"></div>
+      <div class="hero-lines" aria-hidden="true"></div>
+      <div class="wrap hero-layout">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="live-dot"></span> THE NEXT GENERATION STARTS HERE <span class="eyebrow-line"></span> <span class="eyebrow-index">001—∞</span></div>
+          <h1>Good ideas.<br><span class="gradient-text">Real-world</span> momentum.</h1>
+          <p class="hero-lede">We design useful digital systems for the way people <em>actually</em> live, learn, move, and grow. Two products. One connected ambition.</p>
+          <div class="hero-actions">
+            <a href="#products" class="button button-primary magnetic">Explore our products <span aria-hidden="true">↘</span></a>
+            <button class="button button-quiet" type="button" data-start-tour>Take the guided tour <span aria-hidden="true">▷</span></button>
+          </div>
+          <div class="hero-trust-row"><div class="avatar-stack" aria-hidden="true"><span>A</span><span>P</span><span>C</span></div><span>Built with student life in mind</span><span class="mini-divider"></span><span class="mono-muted">DESIGN × TECHNOLOGY × IMPACT</span></div>
+          <div class="welcome-note" id="welcomeNote" hidden><span class="welcome-pulse"></span><span id="welcomeText"></span></div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2" aria-label="Illustration of the SYNEQ connected product ecosystem">
+          <div class="visual-topline"><span class="mono-muted">SYNEQ / ECOSYSTEM MAP</span><span class="status-pill"><i></i> ONLINE CONCEPT</span></div>
+          <div class="orbit-system" id="orbitSystem">
+            <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+            <div class="orbit-center"><div class="center-glyph">S<span>Q</span></div><span>SYNEQ CORE</span></div>
+            <div class="orbit-node node-unitrade"><span class="node-symbol">↗</span><span>UniTrade</span><small>CAMPUS CIRCULARITY</small></div>
+            <div class="orbit-node node-orbitx"><span class="node-symbol">✳</span><span>OrbitX</span><small>HUMAN PERFORMANCE</small></div>
+            <div class="orbit-node node-data"><span class="node-symbol">⌁</span><span>Ideas → Impact</span><small>CONNECTED SYSTEMS</small></div>
+            <span class="orbit-spark spark-a"></span><span class="orbit-spark spark-b"></span><span class="orbit-spark spark-c"></span>
+          </div>
+          <div class="visual-caption"><span>01 / 02 PRODUCTS IN MOTION</span><span>MOVE WITH PURPOSE <span aria-hidden="true">↗</span></span></div>
+        </div>
+      </div>
+      <div class="hero-bottom wrap"><span class="scroll-cue"><span class="scroll-cue-line"></span> SCROLL TO EXPLORE</span><div class="ticker" aria-label="SYNEQ values"><span>THOUGHTFUL BY DESIGN</span><b>✳</b><span>BUILT FOR REAL LIFE</span><b>✳</b><span>BETTER SYSTEMS, BETTER TOMORROWS</span></div><span class="hero-coordinate">31° / IDEAS / 26°</span></div>
+    </section>
+
+    <!-- Product suite -->
+    <section class="section section-products" id="products" data-tour="products">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><p class="section-kicker"><span>01</span> / OUR PRODUCT SUITE</p><h2>Two different problems.<br><span class="muted-heading">One better way forward.</span></h2></div><p class="section-intro">We start with real friction in everyday life, then build digital tools that make the next step feel more natural.</p></div>
+        <div class="product-grid">
+          <article class="product-card product-card-unitrade reveal" data-product="unitrade">
+            <div class="product-card-top"><span class="product-index">PRODUCT / 01</span><span class="product-status"><i></i> EXPLORE LIVE SITE</span></div>
+            <div class="product-brand-row"><div class="product-monogram unitrade-mono"><span>U</span><i>↗</i></div><div><p class="product-pretitle">THE CAMPUS CIRCULAR MARKETPLACE</p><h3>Uni<span>Trade</span></h3></div></div>
+            <p class="product-summary">Give useful things a second life. UniTrade connects students around the campus essentials they need - without the noise of a general marketplace.</p>
+            <div class="product-statline"><div><strong>01</strong><span>LOCAL FIRST</span></div><div><strong>06+</strong><span>WAYS TO EXCHANGE</span></div><div><strong>∞</strong><span>ITEMS WITH POTENTIAL</span></div></div>
+            <div class="product-visual unitrade-visual" aria-hidden="true"><div class="uv-grid"></div><div class="uv-ring uv-ring-one"></div><div class="uv-ring uv-ring-two"></div><div class="uv-item uv-book">▤<small>BOOKS</small></div><div class="uv-item uv-cycle">⌁<small>CYCLES</small></div><div class="uv-item uv-lamp">◉<small>ESSENTIALS</small></div><div class="uv-center">U<span>↻</span></div><span class="uv-coordinate">REUSE / REPEAT / REIMAGINE</span></div>
+            <ul class="feature-pills"><li>Buy / Sell</li><li>Rent / Borrow</li><li>Barter / Donate</li><li>Campus-first</li></ul>
+            <div class="product-card-bottom"><span class="product-domain">unitradeneo.vercel.app</span><a class="button button-light" href="https://unitradeneo.vercel.app/" target="_blank" rel="noopener noreferrer">Open UniTrade <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="product-card product-card-orbitx reveal reveal-delay-1" data-product="orbitx">
+            <div class="product-card-top"><span class="product-index">PRODUCT / 02</span><span class="product-status"><i></i> EXPLORE LIVE SITE</span></div>
+            <div class="product-brand-row"><div class="product-monogram orbitx-mono"><span>O</span><i>✳</i></div><div><p class="product-pretitle">AI-DRIVEN CAMPUS FITNESS & HEALTH</p><h3>Orbit<span>X</span></h3></div></div>
+            <p class="product-summary">Make progress fit real student life. OrbitX brings adaptive training, budget-aware nutrition, and recovery habits into a single health and fitness experience.</p>
+            <div class="product-statline"><div><strong>AI</strong><span>PERSONAL TRAINING</span></div><div><strong>24/7</strong><span>HABIT AWARENESS</span></div><div><strong>1</strong><span>CONNECTED HEALTH HUB</span></div></div>
+            <div class="product-visual orbitx-visual" aria-hidden="true"><div class="ox-grid"></div><div class="ox-pulse pulse-one"></div><div class="ox-pulse pulse-two"></div><div class="ox-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="ox-heart">♡<span>+1</span></div><div class="ox-ring"><span>72<small>READINESS</small></span></div><span class="ox-coordinate">TRAIN SMART / RECOVER WELL</span></div>
+            <ul class="feature-pills"><li>AI Training</li><li>Food Tracker</li><li>Sleep & Recovery</li><li>Student-aware</li></ul>
+            <div class="product-card-bottom"><span class="product-domain">xorbit-ruby.vercel.app</span><a class="button button-light" href="https://xorbit-ruby.vercel.app/" target="_blank" rel="noopener noreferrer">Open OrbitX <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+        <div class="product-footnote"><span class="footnote-icon">i</span><p>Product descriptions on this page explain the intended product direction. Open each live product to explore its current implementation. AI insights, health estimates, and marketplace trust tools should be treated as guidance - not as guaranteed outcomes.</p></div>
+      </div>
+    </section>
+
+    <!-- detailed capabilities -->
+    <section class="section section-capabilities" id="ecosystem" data-tour="capabilities">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><p class="section-kicker"><span>02</span> / WHAT WE ARE BUILDING</p><h2>Designed around<br><span class="gradient-text">the human side</span> of tech.</h2></div><p class="section-intro">The best technology doesn't ask people to live differently just to use it. It meets them where they are and helps them build a better rhythm.</p></div>
+        <div class="capability-tabs reveal" role="tablist" aria-label="Product details">
+          <button class="cap-tab is-active" id="tabUniTrade" type="button" role="tab" aria-selected="true" aria-controls="panelUniTrade" data-cap-tab="unitrade"><span class="cap-tab-number">01</span><span>UniTrade</span><span class="cap-tab-arrow">↗</span></button>
+          <button class="cap-tab" id="tabOrbitX" type="button" role="tab" aria-selected="false" aria-controls="panelOrbitX" data-cap-tab="orbitx"><span class="cap-tab-number">02</span><span>OrbitX</span><span class="cap-tab-arrow">↗</span></button>
+        </div>
+        <div class="cap-panel is-active" id="panelUniTrade" role="tabpanel" aria-labelledby="tabUniTrade" data-cap-panel="unitrade">
+          <div class="cap-panel-copy reveal"><p class="micro-label orange-label">CIRCULAR CAMPUS ECONOMY</p><h3>Make the campus<br>feel more connected.</h3><p>Students often need items for one semester while someone else has a perfectly usable one sitting idle. UniTrade turns that mismatch into a local exchange opportunity - designed around student needs and campus proximity.</p><a class="inline-link" href="https://unitradeneo.vercel.app/" target="_blank" rel="noopener noreferrer">Explore the UniTrade platform <span>↗</span></a></div>
+          <div class="capability-list reveal reveal-delay-1">
+            <div class="capability-item"><span class="cap-icon cap-orange">↔</span><div><h4>More than a sale</h4><p>Buy, sell, rent, borrow, barter, and donate. Flexible exchange modes match the way campus items are actually used.</p></div><span class="cap-item-index">U / 01</span></div>
+            <div class="capability-item"><span class="cap-icon cap-cyan">⌕</span><div><h4>Demand meets discovery</h4><p>Search by category and transaction type, or publish a “Looking For” request so nearby students can respond to real demand.</p></div><span class="cap-item-index">U / 02</span></div>
+            <div class="capability-item"><span class="cap-icon cap-violet">✳</span><div><h4>Useful extras, built in</h4><p>Starter bundles, fair-price estimates, lost-and-found suggestions, roommate split-buy planning, digital notes, and vacation holds.</p></div><span class="cap-item-index">U / 03</span></div>
+            <div class="capability-item"><span class="cap-icon cap-green">↻</span><div><h4>Reuse with visibility</h4><p>Track reuse, savings, and community contributions with clear labels for estimates rather than pretending to measure more than the system knows.</p></div><span class="cap-item-index">U / 04</span></div>
+          </div>
+        </div>
+        <div class="cap-panel" id="panelOrbitX" role="tabpanel" aria-labelledby="tabOrbitX" data-cap-panel="orbitx" hidden>
+          <div class="cap-panel-copy reveal"><p class="micro-label cyan-label">STUDENT WELLBEING SYSTEM</p><h3>Build consistency,<br>not just intensity.</h3><p>Academic schedules are unpredictable. OrbitX is designed to help students find a healthier rhythm with training plans, affordable nutrition, movement, sleep, and recovery all considered together.</p><a class="inline-link cyan-link" href="https://xorbit-ruby.vercel.app/" target="_blank" rel="noopener noreferrer">Explore the OrbitX platform <span>↗</span></a></div>
+          <div class="capability-list reveal reveal-delay-1">
+            <div class="capability-item"><span class="cap-icon cap-cyan">✳</span><div><h4>AI personal trainer</h4><p>Workouts can be tailored to goals, available equipment, experience, and time. Exercise cues should promote safe technique and sensible progression.</p></div><span class="cap-item-index">O / 01</span></div>
+            <div class="capability-item"><span class="cap-icon cap-orange">◒</span><div><h4>Nutrition that respects a budget</h4><p>Log meals, understand macro patterns, and discover balanced food ideas compatible with common campus dining options.</p></div><span class="cap-item-index">O / 02</span></div>
+            <div class="capability-item"><span class="cap-icon cap-violet">⌁</span><div><h4>Whole-day health picture</h4><p>Connect activity, sleep, hydration, and recovery habits with gentle prompts and milestones that help make progress sustainable.</p></div><span class="cap-item-index">O / 03</span></div>
+            <div class="capability-item"><span class="cap-icon cap-green">◎</span><div><h4>Progress without pressure</h4><p>Visualize consistency and learn from trends without shaming missed days. Health signals are educational, not a medical diagnosis.</p></div><span class="cap-item-index">O / 04</span></div>
+          </div>
+        </div>
+        <div class="cap-bottom-note reveal"><span class="note-line"></span><p>OUR PRINCIPLE: MAKE THE NEXT GOOD DECISION THE EASIEST ONE.</p><span class="note-line"></span></div>
+      </div>
+    </section>
+
+    <!-- unusual ideas / design principles -->
+    <section class="section section-signals" id="signals" data-tour="signals">
+      <div class="wrap">
+        <div class="signals-head reveal"><div><p class="section-kicker"><span>03</span> / THE SYNEQ DIFFERENCE</p><h2>Small moments.<br><span class="muted-heading">Smarter systems.</span></h2></div><div class="signal-orbit" aria-hidden="true"><span></span><i></i><b></b></div></div>
+        <div class="signal-grid">
+          <article class="signal-card signal-card-feature reveal"><span class="signal-number">01</span><div class="signal-illustration radar-art" aria-hidden="true"><i></i><i></i><i></i><b></b><span>LISTEN</span></div><h3>Context before complexity.</h3><p>Campus proximity, busy schedules, limited budgets, and everyday habits shape what useful technology should do next.</p><span class="signal-tag">HUMAN-CENTRED SYSTEMS</span></article>
+          <article class="signal-card reveal reveal-delay-1"><span class="signal-number">02</span><div class="signal-illustration signal-icons" aria-hidden="true"><span>↗</span><span>↻</span><span>✳</span></div><h3>Progress you can understand.</h3><p>Show why a suggestion appears, what assumptions it uses, and when a person should make the final call.</p><span class="signal-tag">EXPLAINABLE BY DEFAULT</span></article>
+          <article class="signal-card reveal reveal-delay-2"><span class="signal-number">03</span><div class="signal-illustration constellation" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div><h3>Useful together, not siloed.</h3><p>Digital experiences become more valuable when discovery, action, feedback, and reflection work as one flow.</p><span class="signal-tag">CONNECTED EXPERIENCES</span></article>
+          <article class="signal-card reveal"><span class="signal-number">04</span><div class="signal-illustration pulse-art" aria-hidden="true"><svg viewBox="0 0 240 70" role="img" aria-label="Decorative pulse line"><path d="M0 38 H42 L56 38 L68 13 L88 59 L105 28 L120 38 H153 L164 38 L179 7 L195 59 L210 38 H240"/></svg></div><h3>Quietly adaptive.</h3><p>Thoughtful prompts, meaningful defaults, and flexible paths reduce friction without fighting for attention.</p><span class="signal-tag">ADAPTIVE, NEVER OVERWHELMING</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section section-impact" id="impact" data-tour="impact">
+      <div class="impact-glow" aria-hidden="true"></div>
+      <div class="wrap impact-layout">
+        <div class="impact-copy reveal"><p class="section-kicker"><span>04</span> / IMPACT BY DESIGN</p><h2>Technology with<br><span class="gradient-text">something to give.</span></h2><p>We want technology to make everyday life a little more affordable, a little more manageable, and more connected. Impact starts as a design goal - then earns its numbers through evidence.</p><a href="#about" class="inline-link">Our objective and principles <span>↘</span></a><div class="impact-disclaimer"><span>i</span><p>Impact metrics below are design goals, not verified company results. Product-level metrics should only be published once supported by a documented measurement method.</p></div></div>
+        <div class="impact-dashboard reveal reveal-delay-1">
+          <div class="dashboard-head"><span class="mono-muted">SYNEQ / OUTCOME FRAMEWORK</span><span class="dashboard-dot"><i></i> GOALS</span></div>
+          <div class="impact-metrics">
+            <div class="metric metric-orange"><span class="metric-icon">↻</span><div class="metric-label">CIRCULAR VALUE</div><strong>Less waste</strong><p>Keep usable items in circulation for longer.</p><div class="metric-track"><i style="--metric-fill:76%"></i></div></div>
+            <div class="metric metric-cyan"><span class="metric-icon">✳</span><div class="metric-label">HEALTHY ROUTINES</div><strong>More consistency</strong><p>Make movement and recovery easier to repeat.</p><div class="metric-track"><i style="--metric-fill:68%"></i></div></div>
+            <div class="metric metric-violet"><span class="metric-icon">⌁</span><div class="metric-label">TIME & CLARITY</div><strong>Less friction</strong><p>Make the next step easier to understand.</p><div class="metric-track"><i style="--metric-fill:84%"></i></div></div>
+            <div class="metric metric-green"><span class="metric-icon">◎</span><div class="metric-label">ACCESS & COMMUNITY</div><strong>More connection</strong><p>Design tools for people, not just transactions.</p><div class="metric-track"><i style="--metric-fill:72%"></i></div></div>
+          </div>
+          <div class="dashboard-foot"><span>FRAMEWORK STATUS</span><span>MEASURE → LEARN → IMPROVE <b>↗</b></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-about" id="about" data-tour="about">
+      <div class="wrap">
+        <div class="about-top reveal"><p class="section-kicker"><span>05</span> / WHO WE ARE</p><div class="about-heading"><h2>We believe the future<br>should feel <span class="gradient-text">more human.</span></h2><p>SYNEQ is an independent product concept and systems studio focused on useful, student-aware technology. Our work begins with a simple question: can software make an ordinary day work better?</p></div></div>
+        <div class="about-content-grid">
+          <div class="about-manifesto reveal"><span class="manifesto-label">THE SYNEQ OBJECTIVE</span><p class="manifesto-statement">Build digital products that turn everyday friction into <span>clearer choices, healthier habits, and shared value.</span></p><div class="manifesto-footer"><span>OUR NORTH STAR</span><span class="manifesto-symbol">S<span>Q</span></span></div></div>
+          <div class="about-principles reveal reveal-delay-1">
+            <div class="principle-row"><span>01</span><div><h3>Useful over noisy.</h3><p>Features should solve a real problem, not exist only to look impressive.</p></div><span class="principle-mark">↗</span></div>
+            <div class="principle-row"><span>02</span><div><h3>Transparent by default.</h3><p>Prototype data, AI estimates, and privacy boundaries should be clearly labelled.</p></div><span class="principle-mark">◉</span></div>
+            <div class="principle-row"><span>03</span><div><h3>Built for real constraints.</h3><p>Student budgets, shared spaces, tight schedules, and accessibility matter.</p></div><span class="principle-mark">⌁</span></div>
+            <div class="principle-row"><span>04</span><div><h3>Better with feedback.</h3><p>We learn from the people using our products and improve the experience step by step.</p></div><span class="principle-mark">↻</span></div>
+          </div>
+        </div>
+        <div class="about-bottom-strip"><span>INDEPENDENT THINKING</span><b>×</b><span>INTENTIONAL DESIGN</span><b>×</b><span>RESPONSIBLE TECHNOLOGY</span><b>×</b><span>REAL-WORLD UTILITY</span></div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section section-team" id="team" data-tour="team">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><p class="section-kicker"><span>06</span> / THE PEOPLE BEHIND IT</p><h2>Small team.<br><span class="muted-heading">Curious by nature.</span></h2></div><p class="section-intro">SYNEQ is shaped by student builders who enjoy turning practical ideas into approachable digital experiences.</p></div>
+        <div class="team-grid">
+          <article class="team-card reveal"><div class="team-photo-wrap"><img class="team-photo" src="https://media.licdn.com/dms/image/v2/D5603AQGmu5TEkYEF5g/profile-displayphoto-crop_800_800/B56aC1dl5_GQAI-/0/1789750831326?e=1792022400&v=beta&t=KrHF1aPYmgn0oBdjVkZ3z3HSB8FuqXXNwH5vL04WtEo" alt="Aryan Das profile photo" loading="lazy"><div class="team-photo-fallback">AD</div><span class="team-photo-index">SQ / 001</span></div><div class="team-card-content"><div class="team-role">FOUNDER · PRODUCT & FRONTEND</div><h3>Aryan Das</h3><p class="team-bio">B.Tech CSE student at Lovely Professional University. Interested in building student-focused digital products with practical, polished user experiences.</p><div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>PHP</span><span>SQL</span></div><div class="team-links"><a href="https://in.linkedin.com/in/aryandas-iit" target="_blank" rel="noopener noreferrer" aria-label="Aryan Das on LinkedIn">LinkedIn <span>↗</span></a><a href="https://github.com/AryanDas20" target="_blank" rel="noopener noreferrer" aria-label="Aryan Das on GitHub">GitHub <span>↗</span></a></div></div></article>
+          <article class="team-card reveal reveal-delay-1"><div class="team-photo-wrap"><img class="team-photo" src="https://media.licdn.com/dms/image/v2/D5603AQGmu5TEkYEF5g/profile-displayphoto-crop_800_800/B56aC1dl5_GQAI-/0/1789750831326?e=1792022400&v=beta&t=KrHF1aPYmgn0oBdjVkZ3z3HSB8FuqXXNwH5vL04WtEo" alt="Pranay Kathpaul profile photo" loading="lazy"><div class="team-photo-fallback">PK</div><span class="team-photo-index">SQ / 002</span></div><div class="team-card-content"><div class="team-role">DEVELOPER · RESEARCH CONTRIBUTOR</div><h3>Pranay Kathpaul</h3><p class="team-bio">B.Tech CSE student at Lovely Professional University, contributing to product exploration, research, and the development of useful student experiences.</p><div class="skill-tags"><span>Product Research</span><span>Problem Solving</span><span>Collaboration</span></div><div class="team-links"><a href="https://www.linkedin.com/in/pranay-kathpaul-633600407/" target="_blank" rel="noopener noreferrer" aria-label="Pranay Kathpaul on LinkedIn">LinkedIn <span>↗</span></a><a href="https://github.com/pranaykathpaul2008-ctrl" target="_blank" rel="noopener noreferrer" aria-label="Pranay Kathpaul on GitHub">GitHub <span>↗</span></a></div></div></article>
+          <article class="team-card reveal reveal-delay-2"><div class="team-photo-wrap"><img class="team-photo" src="https://media.licdn.com/dms/image/v2/D5603AQGmu5TEkYEF5g/profile-displayphoto-crop_800_800/B56aC1dl5_GQAI-/0/1789750831326?e=1792022400&v=beta&t=KrHF1aPYmgn0oBdjVkZ3z3HSB8FuqXXNwH5vL04WtEo" alt="Chandan Singh profile photo" loading="lazy"><div class="team-photo-fallback">CS</div><span class="team-photo-index">SQ / 003</span></div><div class="team-card-content"><div class="team-role">DEVELOPER · PROJECT CONTRIBUTOR</div><h3>Chandan Singh</h3><p class="team-bio">Technology contributor focused on collaborative project work, practical implementation, and helping transform early concepts into working product experiences.</p><div class="skill-tags"><span>Development</span><span>Teamwork</span><span>Iteration</span></div><div class="team-links"><button class="link-disabled" type="button" disabled aria-disabled="true" title="LinkedIn profile not provided">LinkedIn <span>↗</span><small>Not available</small></button><a href="https://github.com/Chandan77480" target="_blank" rel="noopener noreferrer" aria-label="Chandan Singh on GitHub">GitHub <span>↗</span></a></div></div></article>
+        </div>
+        <p class="team-photo-note"><span>NOTE</span> The same profile-photo URL was provided for all three contributors, so the site uses that supplied image with initials as a fallback if it fails to load.</p>
+      </div>
+    </section>
+
+    <!-- Tips and utility tools -->
+    <section class="section section-toolkit" id="toolkit" data-tour="toolkit">
+      <div class="wrap">
+        <div class="toolkit-grid">
+          <div class="tips-panel reveal"><p class="section-kicker"><span>07</span> / FIELD NOTES</p><h2>Good tech habits<br>start <span class="gradient-text">small.</span></h2><p class="tips-intro">A few useful principles we bring to the products we build - and the way we use technology ourselves.</p><div class="tip-card" aria-live="polite"><span class="tip-counter" id="tipCounter">FIELD NOTE 01 / 05</span><span class="tip-spark" aria-hidden="true">✳</span><p id="tipText">Make a tool earn its place: if it adds friction without creating value, simplify the flow.</p><div class="tip-card-bottom"><span id="tipCategory">PRODUCTIVITY</span><button class="icon-button tip-next" id="nextTip" type="button" aria-label="Show next tip">↗</button></div></div><button class="text-button" id="shareTip" type="button">Copy this note <span>⧉</span></button></div>
+          <div class="utility-panel reveal reveal-delay-1"><div class="utility-panel-head"><p class="section-kicker"><span>08</span> / YOUR CONTROL ROOM</p><span class="control-room-status"><i></i> INTERACTIVE</span></div><h3>Make this space<br>work for you.</h3><p>Personalize the page, move through the experience, or save a snapshot of what you see.</p><div class="utility-actions">
+              <button class="utility-action" id="utilityTheme" type="button"><span class="utility-icon">☼</span><span><strong>Appearance</strong><small>Switch light / dark mode</small></span><span class="utility-arrow">↗</span></button>
+              <button class="utility-action" data-start-tour type="button"><span class="utility-icon">▷</span><span><strong>Full website tour</strong><small>Explore each section step by step</small></span><span class="utility-arrow">↗</span></button>
+              <button class="utility-action" id="screenshotButton" type="button"><span class="utility-icon">▣</span><span><strong>Capture a screenshot</strong><small>Save a PNG of the page</small></span><span class="utility-arrow">↗</span></button>
+              <button class="utility-action" id="exportDataButton" type="button"><span class="utility-icon">⇩</span><span><strong>Export page data</strong><small>Download a JSON snapshot</small></span><span class="utility-arrow">↗</span></button>
+              <button class="utility-action" id="generateReportButton" type="button"><span class="utility-icon">▧</span><span><strong>Generate personal PDF</strong><small>Export a named summary for your browser session</small></span><span class="utility-arrow">↗</span></button>
+              <a class="utility-action" href="SYNEQ-Project-Guide.pdf" download><span class="utility-icon">▤</span><span><strong>Download project guide</strong><small>Concept, architecture, roadmap, and limitations</small></span><span class="utility-arrow">↗</span></a>
+            </div><div class="privacy-note"><span>⌑</span><p><strong>Local-first prototype.</strong> Your display name and theme are stored in this browser only. This is not secure production authentication and does not send your profile to a server.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="section closing-section" id="next" data-tour="closing">
+      <div class="wrap closing-card reveal"><div class="closing-graphic" aria-hidden="true"><div class="closing-ring ring-1"></div><div class="closing-ring ring-2"></div><div class="closing-ring ring-3"></div><span>SQ</span></div><div class="closing-copy"><p class="section-kicker"><span>09</span> / WHAT COMES NEXT</p><h2>Let's make the<br><span class="gradient-text">useful future.</span></h2><p>Explore the products, meet the people behind them, and follow the ideas as they evolve from concepts into better everyday experiences.</p><div class="closing-actions"><a href="https://unitradeneo.vercel.app/" target="_blank" rel="noopener noreferrer" class="button button-primary">Visit UniTrade <span>↗</span></a><a href="https://xorbit-ruby.vercel.app/" target="_blank" rel="noopener noreferrer" class="button button-outline">Visit OrbitX <span>↗</span></a></div></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer" data-tour="footer">
+    <div class="wrap footer-main"><div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark"><span>S</span><i></i></span><span class="brand-word">SYNEQ<span class="brand-dot">.</span><small>INDEPENDENT SYSTEMS STUDIO</small></span></a><p>Useful systems for the next generation.</p></div><div class="footer-column"><span>EXPLORE</span><a href="#products">Products</a><a href="#ecosystem">Capabilities</a><a href="#impact">Impact framework</a></div><div class="footer-column"><span>SYNEQ</span><a href="#about">Our objective</a><a href="#team">Contributors</a><a href="#toolkit">Field notes & tools</a></div><div class="footer-column"><span>PRODUCTS</span><a href="https://unitradeneo.vercel.app/" target="_blank" rel="noopener noreferrer">UniTrade ↗</a><a href="https://xorbit-ruby.vercel.app/" target="_blank" rel="noopener noreferrer">OrbitX ↗</a><a href="SYNEQ-Project-Guide.pdf" download>Project guide ↓</a></div><div class="footer-side"><div class="footer-stamp"><span>SYNEQ</span><small>THOUGHTFUL SYSTEMS<br>REAL-WORLD MOMENTUM</small></div><button class="back-top" id="backTop" type="button">Back to top <span>↑</span></button></div></div>
+    <div class="wrap footer-bottom"><span>© <span id="currentYear">2026</span> SYNEQ. CONCEPT STUDIO.</span><span>MADE TO BE USEFUL <b>✳</b> MADE TO EVOLVE</span><span class="footer-local"><i></i> LOCAL-FIRST INTERACTIONS</span></div>
+  </footer>
+
+  <!-- Account modal -->
+  <div class="modal-backdrop" id="accountModal" hidden>
+    <section class="modal account-modal" role="dialog" aria-modal="true" aria-labelledby="accountModalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close account dialog">×</button><div class="modal-mark">SQ<span>↗</span></div><p class="section-kicker"><span>YOUR SPACE</span> / LOCAL PROFILE</p><h2 id="accountModalTitle">Make this space yours.</h2><p class="modal-intro">Add a display name for a more personal experience. This demo profile is saved only in this browser.</p>
+      <form id="accountForm"><label for="profileName">Display name</label><input id="profileName" name="profileName" type="text" autocomplete="name" placeholder="How should we call you?" maxlength="60" required><label for="profileEmail">Email <span>(optional)</span></label><input id="profileEmail" name="profileEmail" type="email" autocomplete="email" placeholder="you@example.com"><div class="form-note"><span>⌑</span> No server sign-in is configured. Do not enter passwords or sensitive information.</div><button class="button button-primary button-full" type="submit">Save my space <span>↗</span></button><button class="text-button modal-logout" id="logoutButton" type="button" hidden>Log out from this browser <span>↗</span></button></form>
+    </section>
+  </div>
+
+  <!-- Search / command panel -->
+  <div class="modal-backdrop search-backdrop" id="searchModal" hidden>
+    <section class="search-modal" role="dialog" aria-modal="true" aria-labelledby="searchTitle"><div class="search-modal-top"><span class="mono-muted" id="searchTitle">SYNEQ / QUICK FIND</span><button type="button" class="keycap" data-close-modal>ESC</button></div><div class="search-input-wrap"><span>⌕</span><input id="siteSearch" type="search" placeholder="Search products, features, people..." autocomplete="off" aria-label="Search this website"><kbd>↵</kbd></div><p class="search-hint">Search a section or action. Use ↑ ↓ to move, Enter to open.</p><div class="search-results" id="searchResults" role="listbox" aria-label="Search results"></div><div class="search-footer"><span>QUICK NAVIGATION</span><span><kbd>↑</kbd><kbd>↓</kbd> TO MOVE <kbd>↵</kbd> TO OPEN</span></div></section>
+  </div>
+
+  <!-- Keyboard shortcuts modal -->
+  <div class="modal-backdrop" id="shortcutsModal" hidden><section class="modal shortcuts-modal" role="dialog" aria-modal="true" aria-labelledby="shortcutsTitle"><button class="modal-close" type="button" data-close-modal aria-label="Close shortcuts dialog">×</button><p class="section-kicker"><span>QUICK CONTROL</span> / KEYBOARD</p><h2 id="shortcutsTitle">Shortcuts that move you.</h2><div class="shortcut-list"><div><span>Open quick search</span><kbd>/</kbd></div><div><span>Toggle light / dark mode</span><kbd>T</kbd></div><div><span>Start guided tour</span><kbd>G</kbd></div><div><span>Open your profile</span><kbd>P</kbd></div><div><span>Capture screenshot</span><kbd>Shift S</kbd></div><div><span>Show keyboard shortcuts</span><kbd>?</kbd></div><div><span>Close dialog / tour</span><kbd>Esc</kbd></div></div><p class="form-note">Shortcuts are paused while typing in input fields.</p></section></div>
+
+  <!-- Full-site guided tour -->
+  <div class="tour-scrim" id="tourScrim" hidden><div class="tour-spotlight" id="tourSpotlight"></div><section class="tour-card" id="tourCard" role="dialog" aria-modal="true" aria-labelledby="tourTitle"><div class="tour-card-top"><span class="tour-eyebrow"><i></i> THE SYNEQ WALKTHROUGH</span><button type="button" class="tour-close" id="tourClose" aria-label="Close guided tour">×</button></div><div class="tour-progress-track"><span id="tourProgress"></span></div><div class="tour-card-body"><p class="tour-step-count" id="tourStepCount">STEP 01 / 10</p><h2 id="tourTitle">Welcome to SYNEQ.</h2><p id="tourDescription">A quick guided path through every part of this page.</p></div><div class="tour-card-bottom"><button class="text-button" id="tourBack" type="button">← Back</button><span class="tour-dots" id="tourDots" aria-hidden="true"></span><button class="button button-primary" id="tourNext" type="button">Next <span>→</span></button></div></section></div>
+
+  <!-- Toasts / floating shortcut dock -->
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <div class="floating-dock" aria-label="Quick actions"><button id="dockSearch" type="button" aria-label="Search website" title="Search (/)" >⌕</button><button id="dockShortcuts" type="button" aria-label="Keyboard shortcuts" title="Keyboard shortcuts (?)">⌘</button><button id="dockTour" type="button" aria-label="Start guided tour" title="Guided tour (G)">▷</button><span class="dock-separator"></span><button id="dockTop" type="button" aria-label="Back to top" title="Back to top">↑</button></div>
+
+  <noscript><div class="noscript-note">This site uses JavaScript for theme controls, search, the tour, and local profile interactions. Product links remain available without it.</div></noscript>
+</body>
+</html>
